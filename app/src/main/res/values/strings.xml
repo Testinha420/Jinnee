@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Jinnee</string>
+    <string name="open_menu">Open Menu</string>
+    <string name="FACEBOOK_APP_ID">1066769890024155</string>
+
+    <!-- MENU ITEMS -->
+
+    <string name="map">Mapa</string>
+    <string name="promotions">Promoções</string>
+    <string name="places">Lugares</string>
+    <string name="profile">Perfil</string>
+    <string name="config">Configurações</string>
+    <string name="forgot_pass">Esqueceu a senha?</string>
+
+    <string-array name="menu_array">
+        <item>@string/map</item>
+        <item>@string/promotions</item>
+        <item>@string/places</item>
+        <item>@string/profile</item>
+        <item>@string/config</item>
+    </string-array>
+
+    <!-- END MENU ITEMS -->
+
+</resources>

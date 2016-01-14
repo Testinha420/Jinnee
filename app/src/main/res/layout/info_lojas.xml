@@ -1,0 +1,86 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/image_loja"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/image_loja"/>
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@id/image_loja"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient" />
+
+    <TextView
+        android:id="@+id/name_loja"
+        android:text="Chilli Beans - Shopping West Plaza"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_alignBottom="@id/image_loja"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/buttons_lojas"
+        android:layout_below="@id/name_loja"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/go_map"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:drawableTop="@drawable/pointer"
+            android:text="Ir para mapa"
+            android:textSize="8sp"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/info_hour"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:drawableTop="@drawable/chest"
+            android:text="10:00 ás 23:00"
+            android:textSize="8sp"
+            android:background="@color/white"/>
+
+        <Button
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:drawableTop="@drawable/star"
+            android:text="Favorito"
+            android:textSize="8sp"
+            android:background="@color/white"/>
+
+        <Button
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:drawableTop="@drawable/more_info"
+            android:text="Mais detalhes"
+            android:textSize="8sp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>

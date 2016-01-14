@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#28235d</color>
+    <color name="colorPrimaryDark">#1d173f</color>
+    <color name="colorAccent">#28235d</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="bg_login">#f1f5f8</color>
+    <color name="gray">#ebebeb</color>
+    <color name="purple_full">#28235d</color>
+    <color name="title_promotion">#656565</color>
+    <color name="description_promotion">#999999</color>
+    <color name="yellow">#e6fa02</color>
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <RelativeLayout
+        android:id="@+id/fields"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/bt_register"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Cadastrar"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/bt_login"
+                android:background="@color/gray"
+                android:layout_toRightOf="@id/bt_register"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Login"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_below="@id/buttons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_jinnee"/>
+
+        <LinearLayout
+            android:id="@+id/layout_login"
+            android:visibility="gone"
+            android:layout_below="@+id/logo"
+            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login_button"
+                facebook:com_facebook_login_text="Entrar com o Facebook"
+                android:layout_below="@id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="25dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_below="@id/facebook_login_button"
+                android:drawableLeft="@drawable/ic_envelope"
+                android:drawablePadding="16dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_below="@id/facebook_login_button"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawablePadding="16dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/forgot_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/forgot_pass"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:background="@color/purple_full"
+                android:text="Ok"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_register"
+            android:visibility="visible"
+            android:layout_below="@+id/logo"
+            android:orientation="vertical"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/register_name"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:hint="Nome"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:paddingLeft="16dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:hint="Telefone"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:background="@color/purple_full"
+                android:text="Cadastrar"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
